@@ -1,10 +1,10 @@
-function component() {
-    const element = document.createElement('div');
-
-    // lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-    return element;
-}
-
-document.body.appendChild(component());
+var a = 1;
+var json = {
+    name: 'tjt',
+    age: 24,
+};
+var fn = function () {
+    var a = 1;
+    var str = '134';
+    return a + str;
+};
