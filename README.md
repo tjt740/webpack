@@ -35,3 +35,18 @@ license：许可证
 ---
 
 > webpack 5
+
+---
+
+# TypeScript
+
+1. 安装编译 TS 的工具包 `npm i -g typescript`
+
+2. 验证 TS 是否安装成功 `tsc -v`
+
+> 简化运行 TS 的步骤
+> 每次修改代码后，都要重复执行两个命令，才能运行 TS 代码，我们可以直接使用 ts-node 工具包，直接在 node.js 中执行 TS 代码。
+
+安装命令：npm i -g ts-node
+
+使用方式：ts-node hello.ts

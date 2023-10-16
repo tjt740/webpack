@@ -1,10 +1,10 @@
-var a = 1;
-var json = {
-    name: 'tjt',
-    age: 24,
+var fn = function (params) {
+    var number = 1;
+    var result = Number(params)
+        ? number + Number(params)
+        : String(number).concat(String(params));
+    return result;
 };
-var fn = function () {
-    var a = 1;
-    var str = '134';
-    return a + str;
-};
+fn(1);
+fn('123');
+console.log(fn('你好'));
