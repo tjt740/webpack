@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin =
+    require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: {
@@ -15,14 +17,28 @@ module.exports = {
         },
     },
     plugins: [
+        new BundleAnalyzerPlugin(), // 代码检查分析工具
         new HtmlWebpackPlugin({
-            title: 'Development',
+            title: 'Caching',
         }), // Generates default index.html
     ],
     output: {
-        filename: '[name].bundle.js',
+        // filename: '[name].bundle.js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
         publicPath: '/',
+    },
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all',
+                },
+            },
+        },
     },
 };
