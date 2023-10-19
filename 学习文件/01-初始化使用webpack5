@@ -1,0 +1,5 @@
+// 安装webpack
+// 链接: https://www.webpackjs.com/guides/getting-started/
+
+// 编译打包文件
+// npx webpack--mode = development
