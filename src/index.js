@@ -65,5 +65,6 @@ var Bb = /** @class */ (function (_super) {
     }
     return Bb;
 })(Aa);
-var b = new Bb(14512111);
+var b = new Bb(1);
 var b1 = new Bb(120);
+console.log(process.env.NODE_ENV);

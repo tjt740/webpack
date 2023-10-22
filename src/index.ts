@@ -31,3 +31,5 @@ class Bb extends Aa {
 
 const b = new Bb(14521);
 const b1 = new Bb(120);
+
+console.log(process.env.NODE_ENV);
